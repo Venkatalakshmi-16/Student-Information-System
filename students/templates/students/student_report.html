@@ -1,0 +1,33 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+
+<h2>Report Card</h2>
+
+<h4>Name: {{ student.name }}</h4>
+<h5>Roll Number: {{ student.roll_number }}</h5>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mark in marks %}
+        <tr>
+            <td>{{ mark.subject.name }}</td>
+            <td>{{ mark.marks }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h4>Total Marks: {{ total }}</h4>
+<h4>Percentage: {{ percentage }}</h4>
+<h4>Grade: {{ grade }}</h4>
+
+<a href="/" class="btn btn-secondary">Back</a>
+
+{% endblock %}

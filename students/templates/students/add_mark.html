@@ -1,0 +1,52 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+
+<div class="card shadow">
+    <div class="card-header bg-primary text-white">
+        <h4>Add Marks</h4>
+    </div>
+
+    <div class="card-body">
+
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- Non-field errors (like duplicate entry) -->
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.non_field_errors %}
+                        <p class="mb-0">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="mb-3">
+                <label class="form-label">Student</label>
+                {{ form.student }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Subject</label>
+                {{ form.subject }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Marks</label>
+                {{ form.marks }}
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                Save Marks
+            </button>
+
+            <a href="/" class="btn btn-secondary">
+                Back
+            </a>
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

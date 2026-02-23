@@ -1,0 +1,29 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="card shadow text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5>Total Students</h5>
+                <h2>{{ total_students }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow text-white bg-success mb-3">
+            <div class="card-body">
+                <h5>Total Marks Entries</h5>
+                <h2>{{ total_marks }}</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
