@@ -19,7 +19,7 @@ The system supports full CRUD operations for students. Users can add new student
 
 Users can add subject-wise marks for each student. The system prevents duplicate subject entries for the same student using database constraints. This ensures data accuracy and integrity.
 
-** Report Generation**
+**Report Generation**
 
 For each student, the system generates a report that displays subject-wise marks, total marks, percentage, and grade. The percentage is calculated as the average of all subject marks.
 
@@ -27,7 +27,7 @@ For each student, the system generates a report that displays subject-wise marks
 
 Grades are assigned based on percentage. For example, 90 and above is A+, 80–89 is A, 70–79 is B, and below 40 is considered Fail. This grading logic is implemented dynamically in the backend.
 
-** Technologies Used**
+**Technologies Used**
 
 The project is developed using Python and Django. SQLite is used as the database. HTML and Bootstrap are used to create a clean and responsive user interface.
 
